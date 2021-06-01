@@ -1,6 +1,7 @@
 <?php
 
 require_once "Shop.php";
+require_once 'Toys.php';
 
 $libri[] = new Shop("manuali");
 
