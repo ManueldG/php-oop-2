@@ -18,6 +18,7 @@ class Shop{
         $this->tipo = '';
         $this->prezzo = '';
         $this->descrizione= '';
+       
         
     }
 
@@ -86,6 +87,10 @@ class Shop{
     }
     
     
+    
+}
+
+class Toys extends Shop {
     
 }
 
