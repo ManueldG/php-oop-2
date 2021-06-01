@@ -90,7 +90,13 @@ class Shop{
     
 }
 
-class Toys extends Shop {
+    class Toys extends Shop {
+        protected $material;
+        function __construct($art) {
+            parent::__construct($art){
+                $this->articolo=$material;
+                
+            }
+        }    
     
-}
 
