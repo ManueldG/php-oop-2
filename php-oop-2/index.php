@@ -1,7 +1,8 @@
 <?php
 
-//require_once "Shop.php";
-//require_once 'Toys.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL | E_STRICT);
 
 function autoloadClass($className){
     $path=str_replace('\\', '/', $className).'.php';
@@ -17,7 +18,14 @@ $libri[] = new Shop("manuali");
 var_dump($libri);
 
 
-$giochi[] = new Toys("Giochi da giardino");
+$giochi[0] = new Toys("Giochi da giardino");
+$giochi[1] = new Toys("Giochi da giardino");
+$giochi[2] = new Toys("Giochi da giardino");
+
+$giochi[0]->valid('ciao');
+$giochi[1]->valid('Mondo');
+$giochi[2]->valid('intero');
 
 var_dump($giochi);
+
 
