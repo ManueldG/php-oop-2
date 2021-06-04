@@ -1,5 +1,5 @@
 <?php
-class Toys extends Shop implements Inew {
+class Toys extends Shop {
     protected $material;
     protected $arg;
     public function __construct($art) {
@@ -9,10 +9,7 @@ class Toys extends Shop implements Inew {
         $this->material='';   
     }
     
-    public function valid($arg)
-    {
-        $this->arg = $arg;        
-    }
+    
     
     
 }

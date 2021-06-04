@@ -1,6 +1,6 @@
 <?php
 
-abstract class test implements \Inew
+abstract class Anew implements Inew
 {
 
     public function __construct()
