@@ -4,13 +4,16 @@
  * @author ManueldG
  *
  */
-class Shop{
-    
+class Shop extends Anew {
+    protected  $id;
     protected  $articolo;
     protected  $tipo;
     protected  $prezzo;
     protected  $descrizione;
-    
+    protected  $percSconto;    
+    protected  $iva;
+    protected  $qta;
+    public  $categoria;  
     
 
     public function __construct($articolo){
@@ -18,6 +21,7 @@ class Shop{
         $this->tipo = '';
         $this->prezzo = '';
         $this->descrizione= '';
+        
        
         
     }
@@ -84,6 +88,11 @@ class Shop{
     public function setDescrizione($descrizione)
     {
         $this->descrizione = $descrizione;
+    }
+    
+    public function valid($arg)
+    {
+        $this->arg = $arg;
     }
     
     

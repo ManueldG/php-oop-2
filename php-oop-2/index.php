@@ -15,16 +15,18 @@ spl_autoload_register('autoloadClass');
 
 $libri[] = new Shop("manuali");
 
+
 var_dump($libri);
 
 
 $giochi[0] = new Toys("Giochi da giardino");
 $giochi[1] = new Toys("Giochi da giardino");
-$giochi[2] = new Toys("Giochi da giardino");
+$giochi[2] = new Toys("Giochi ");
 
 $giochi[0]->valid('ciao');
-//$giochi[1]->valid('Mondo');
-//$giochi[2]->valid('intero');
+
+$giochi[1]->valid('Mondo');
+
 
 var_dump($giochi);
 
