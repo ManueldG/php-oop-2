@@ -1,6 +1,6 @@
 <?php
 
-abstract class Anew implements Metod{
+abstract class PrezzoFinale implements Metod{
 
     public function __construct()
     {}

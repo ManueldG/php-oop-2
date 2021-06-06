@@ -4,7 +4,7 @@
  * @author ManueldG
  *
  */
-class Shop extends Anew {
+class Shop extends PrezzoFinale {
     protected  $id;
     protected  $articolo;
     protected  $tipo;
@@ -13,17 +13,15 @@ class Shop extends Anew {
     protected  $percSconto;    
     protected  $iva;
     protected  $qta;
-    public  $categoria;  
+    protected   $categoria;  
     
 
-    public function __construct($articolo){
-        $this->articolo = $articolo;
-        $this->tipo = '';
-        $this->prezzo = '';
-        $this->descrizione= '';
-        
-       
-        
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
     /**
@@ -35,21 +33,13 @@ class Shop extends Anew {
     }
 
     /**
-     * @param mixed $articolo
-     */
-    public function setArticolo($articolo)
-    {
-        $this->articolo = $articolo;
-    }
-    
-    /**
      * @return string
      */
     public function getTipo()
     {
         return $this->tipo;
     }
-    
+
     /**
      * @return string
      */
@@ -57,7 +47,7 @@ class Shop extends Anew {
     {
         return $this->prezzo;
     }
-    
+
     /**
      * @return string
      */
@@ -65,7 +55,55 @@ class Shop extends Anew {
     {
         return $this->descrizione;
     }
-    
+
+    /**
+     * @return mixed
+     */
+    public function getPercSconto()
+    {
+        return $this->percSconto;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIva()
+    {
+        return $this->iva;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getQta()
+    {
+        return $this->qta;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategoria()
+    {
+        return $this->categoria;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @param mixed $articolo
+     */
+    public function setArticolo($articolo)
+    {
+        $this->articolo = $articolo;
+    }
+
     /**
      * @param string $tipo
      */
@@ -73,7 +111,7 @@ class Shop extends Anew {
     {
         $this->tipo = $tipo;
     }
-    
+
     /**
      * @param string $prezzo
      */
@@ -81,7 +119,7 @@ class Shop extends Anew {
     {
         $this->prezzo = $prezzo;
     }
-    
+
     /**
      * @param string $descrizione
      */
@@ -89,13 +127,53 @@ class Shop extends Anew {
     {
         $this->descrizione = $descrizione;
     }
-    
-    public function valid($arg)
+
+    /**
+     * @param mixed $percSconto
+     */
+    public function setPercSconto($percSconto)
     {
-        $this->arg = $arg;
+        $this->percSconto = $percSconto;
+    }
+
+    /**
+     * @param mixed $iva
+     */
+    public function setIva($iva)
+    {
+        $this->iva = $iva;
+    }
+
+    /**
+     * @param mixed $qta
+     */
+    public function setQta($qta)
+    {
+        $this->qta = $qta;
+    }
+
+    /**
+     * @param mixed $categoria
+     */
+    public function setCategoria($categoria)
+    {
+        $this->categoria = $categoria;
+    }
+
+    public function __construct($articolo){
+        $this->articolo = $articolo;
+        $this->tipo = '';
+        $this->prezzo = '';
+        $this->descrizione= '';       
+    }
+    
+    public function visualizzaProdotto() {
+        return ("Prodotto\nCodice: ".getIdProdotto()." Titolo: ".getDescrizione()."  Quantità: ".getQta()." Categoria: ".getCategoria()." Prezzo: ".$this.prezzoFinale()." euro");
+            
     }
     
     
+
     
 }
 
