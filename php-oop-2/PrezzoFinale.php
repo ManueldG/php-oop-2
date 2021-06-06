@@ -6,7 +6,7 @@ abstract class PrezzoFinale implements Metod{
     {}
 
     public function prezzoFinale(){
-        return $getPrezzo()*$getQta()+($getPrezzo()*$getQta()*$getIva())/100 - ($getPrezzo()*$getQta()*$getPercSconto())/100;
+        return $this->getPrezzo()*$this->getQta()+($this->getPrezzo()*$this->getQta()*$this->getIva())/100 - ($this->getPrezzo()*$this->getQta()*$this->getPercSconto())/100;
     }
     public abstract function visualizzaProdotto();
     

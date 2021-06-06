@@ -13,8 +13,14 @@ class Shop extends PrezzoFinale {
     protected  $percSconto;    
     protected  $iva;
     protected  $qta;
-    protected   $categoria;  
-    
+    protected  $categoria;  
+
+    public function __construct($articolo){
+        $this->articolo = $articolo;
+        $this->tipo = '';
+        $this->prezzo = 0;
+        $this->descrizione= new Categoria(2, 'libro');
+    }
 
     /**
      * @return mixed
@@ -159,17 +165,15 @@ class Shop extends PrezzoFinale {
     {
         $this->categoria = $categoria;
     }
-
-    public function __construct($articolo){
-        $this->articolo = $articolo;
-        $this->tipo = '';
-        $this->prezzo = '';
-        $this->descrizione= '';       
-    }
     
     public function visualizzaProdotto() {
-        return ("Prodotto\nCodice: ".getIdProdotto()." Titolo: ".getDescrizione()."  Quantità: ".getQta()." Categoria: ".getCategoria()." Prezzo: ".$this.prezzoFinale()." euro");
+        return ("Prodotto\nCodice: ".$this->getId()." Titolo: ".$this->getDescrizione()."  Quantità: ".$this->getQta()." Categoria: ".$this->getCategoria()." Prezzo: ".$this->prezzoFinale()." euro");
             
+    }
+    
+    public function prezzoFinale() {
+        parent::prezzoFinale();
+        //return PrezzoFinale::prezzoFinale();
     }
     
     

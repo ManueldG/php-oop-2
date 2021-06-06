@@ -14,6 +14,7 @@ function autoloadClass($className){
 spl_autoload_register('autoloadClass');
 
 $libri[] = new Shop("manuali");
+$libri[] = new Shop("riviste");
 
 
 var_dump($libri);
@@ -23,10 +24,8 @@ $giochi[0] = new Toys("Giochi da giardino");
 $giochi[1] = new Toys("Giochi da giardino");
 $giochi[2] = new Toys("Giochi ");
 
-$giochi[0]->valid('ciao');
 
-$giochi[1]->valid('Mondo');
-
+$giochi[2]->visualizzaProdotto();
 
 var_dump($giochi);
 
