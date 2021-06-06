@@ -5,21 +5,25 @@
  *
  */
 class Shop extends PrezzoFinale {
-    protected  $id;
-    protected  $articolo;
-    protected  $tipo;
-    protected  $prezzo;
-    protected  $descrizione;
-    protected  $percSconto;    
-    protected  $iva;
-    protected  $qta;
-    protected  $categoria;  
-
-    public function __construct($articolo,$cat){
-        $this->articolo = $articolo;
-        $this->tipo = '';
-        $this->prezzo = 0;
-        $this->categoria= $cat;
+    protected  $_id;
+    protected  $_tipo;
+    protected  $_prezzo;
+    protected  $_descrizione;
+    protected  $_percSconto;    
+    protected  $_iva;
+    protected  $_qta;
+    protected  $_categoria;  
+    
+    //public Prodotto( id, descrizione, prezzo, int percSconto, int iva, int qta, Categoria categoria) {
+    public function __construct($id,$descrizione,$prezzo,$percSconto,$iva,$qta,$categoria){
+        
+        $this->_id = $id;
+        $this->_descrizione = $descrizione;
+        $this->_prezzo = $prezzo;
+        $this->_percSconto = $percSconto;
+        $this->_iva = $iva;
+        $this->_qta = $qta;
+        $this->categoria= $categoria;
     }
 
     /**
