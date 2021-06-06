@@ -15,11 +15,11 @@ class Shop extends PrezzoFinale {
     protected  $qta;
     protected  $categoria;  
 
-    public function __construct($articolo){
+    public function __construct($articolo,$cat){
         $this->articolo = $articolo;
         $this->tipo = '';
         $this->prezzo = 0;
-        $this->descrizione= new Categoria(2, 'libro');
+        $this->categoria= $cat;
     }
 
     /**

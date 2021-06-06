@@ -12,7 +12,7 @@ function autoloadClass($className){
 };
 
 spl_autoload_register('autoloadClass');
-
+$c = new Categoria(1, 'manuali');
 $libri[] = new Shop("manuali");
 $libri[] = new Shop("riviste");
 
