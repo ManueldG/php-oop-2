@@ -1,15 +1,14 @@
 <?php
 
-abstract class Anew implements Inew
-{
+abstract class Anew implements Metod{
 
     public function __construct()
     {}
 
-    public abstract function valid($arg);
-     
-        
-        
+    public function prezzoFinale(){
+        return $getPrezzo()*$getQta()+($getPrezzo()*$getQta()*$getIva())/100 - ($getPrezzo()*$getQta()*$getPercSconto())/100;
+    }
+    public abstract function visualizzaProdotto();
     
 }
 
