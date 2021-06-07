@@ -31,7 +31,7 @@ class Shop extends PrezzoFinale {
      */
     public function getId()
     {
-        return $this->id;
+        return $this->_id;
     }
 
     /**
@@ -39,7 +39,7 @@ class Shop extends PrezzoFinale {
      */
     public function getArticolo()
     {
-        return $this->articolo;
+        return $this->_articolo;
     }
 
     /**
@@ -47,7 +47,7 @@ class Shop extends PrezzoFinale {
      */
     public function getTipo()
     {
-        return $this->tipo;
+        return $this->_tipo;
     }
 
     /**
@@ -55,7 +55,7 @@ class Shop extends PrezzoFinale {
      */
     public function getPrezzo()
     {
-        return $this->prezzo;
+        return $this->_prezzo;
     }
 
     /**
@@ -63,7 +63,7 @@ class Shop extends PrezzoFinale {
      */
     public function getDescrizione()
     {
-        return $this->descrizione;
+        return $this->_descrizione;
     }
 
     /**
@@ -71,7 +71,7 @@ class Shop extends PrezzoFinale {
      */
     public function getPercSconto()
     {
-        return $this->percSconto;
+        return $this->_percSconto;
     }
 
     /**
@@ -79,7 +79,7 @@ class Shop extends PrezzoFinale {
      */
     public function getIva()
     {
-        return $this->iva;
+        return $this->_iva;
     }
 
     /**
@@ -87,7 +87,7 @@ class Shop extends PrezzoFinale {
      */
     public function getQta()
     {
-        return $this->qta;
+        return $this->_qta;
     }
 
     /**
@@ -95,7 +95,7 @@ class Shop extends PrezzoFinale {
      */
     public function getCategoria()
     {
-        return $this->categoria;
+        return $this->_categoria;
     }
 
     /**
@@ -103,7 +103,7 @@ class Shop extends PrezzoFinale {
      */
     public function setId($id)
     {
-        $this->id = $id;
+        $this->_id = $id;
     }
 
     /**
@@ -111,7 +111,7 @@ class Shop extends PrezzoFinale {
      */
     public function setArticolo($articolo)
     {
-        $this->articolo = $articolo;
+        $this->_articolo = $articolo;
     }
 
     /**
@@ -119,7 +119,7 @@ class Shop extends PrezzoFinale {
      */
     public function setTipo($tipo)
     {
-        $this->tipo = $tipo;
+        $this->_tipo = $tipo;
     }
 
     /**
@@ -127,7 +127,7 @@ class Shop extends PrezzoFinale {
      */
     public function setPrezzo($prezzo)
     {
-        $this->prezzo = $prezzo;
+        $this->_prezzo = $prezzo;
     }
 
     /**
@@ -135,7 +135,7 @@ class Shop extends PrezzoFinale {
      */
     public function setDescrizione($descrizione)
     {
-        $this->descrizione = $descrizione;
+        $this->_descrizione = $descrizione;
     }
 
     /**
@@ -143,7 +143,7 @@ class Shop extends PrezzoFinale {
      */
     public function setPercSconto($percSconto)
     {
-        $this->percSconto = $percSconto;
+        $this->_percSconto = $percSconto;
     }
 
     /**
@@ -151,7 +151,7 @@ class Shop extends PrezzoFinale {
      */
     public function setIva($iva)
     {
-        $this->iva = $iva;
+        $this->_iva = $iva;
     }
 
     /**
@@ -159,7 +159,7 @@ class Shop extends PrezzoFinale {
      */
     public function setQta($qta)
     {
-        $this->qta = $qta;
+        $this->_qta = $qta;
     }
 
     /**
@@ -167,7 +167,7 @@ class Shop extends PrezzoFinale {
      */
     public function setCategoria($categoria)
     {
-        $this->categoria = $categoria;
+        $this->_categoria = $categoria;
     }
     
     public function visualizzaProdotto() {

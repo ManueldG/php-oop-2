@@ -18,18 +18,29 @@ class Carrello
     }
     
     public function aggiungiProdotto($p) {
-        if (p==null)
-            return;
-            
-            // ricerca del prodotto p
-            $i = cercaProdotto2($p);
-            
+        if ($p==null)
+            return;            
+            // ricerca del prodotto $p
+            $i = $this->cercaProdotto2($p);         
+            echo(" i ".$i);
             if ($i==-1) {
                 // non c'è il prodotto quindi si può aggiungere
-                $_prodotti[]=$p;
+                $this->_prodotti[]=$p;
                 $this->_numProdotti++;
-            } else {
-                $_prodotti[i]->setQta($_prodotti[i]->getQta()+1);
+                echo ("\nnumero prodotti\n");
+                var_dump($this->_prodotti);
+                
+            } else {            
+                try {
+                    //var_dump( $this->_prodotti[$i]->setQta($this->_prodotti[$i]->getQta()+1));
+                    
+                    
+                } catch (Exception $e) {
+                    echo ("\nerrore ".$e);
+                }          
+                
+                
+                
                 // Il prodotto esiste già nel carrello. Incremento la quantità di 1
             }
     } // fine aggiungiProdotto
@@ -59,7 +70,7 @@ class Carrello
                     $s=$s."Nel carrello c'è ".$this->_numProdotti." prodotto\n";
                     
                     foreach ( $this->_prodotti as $p)
-                        $s=$s.p.visualizzaProdotto()."\n";
+                        $s=$s.$p.visualizzaProdotto()."\n";
                         
                         $s = $s.("Totale carrello: {$this->getTotale()} euro");
                         return $s;
@@ -73,6 +84,23 @@ class Carrello
             $totale = $totale + $p->prezzoFinale();
         }
         return $totale;
+    }
+    public function cercaProdotto($idProdotto) {
+        for ( $i=0; $i<getNumProdotti(); $i++)
+            if ($idProdotto===($this->_prodotti[i]->getIdProdotto()))
+                return i;
+                return -1;
+    }
+    
+    public function cercaProdotto2($p) { 
+        
+            echo ("valore");
+            var_dump($this->_prodotti);
+            if ($p==$this->_prodotti)
+                return 0;
+            else 
+                return (-1);
+               
     }
     
     

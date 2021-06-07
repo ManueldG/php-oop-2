@@ -24,7 +24,15 @@ var_dump($giochi);
 
 $carr = new Carrello();
 
- var_dump( $libri[1]->getCategoria());
- var_dump($carr->mostraCarrello());
+ 
+ 
+ 
+ echo("Aggiungo i prodotti ");
+ $carr->aggiungiProdotto($giochi[0]);
+ $carr->aggiungiProdotto($giochi[0]);
+ 
+ var_dump($carr);
+
+ 
  
 
