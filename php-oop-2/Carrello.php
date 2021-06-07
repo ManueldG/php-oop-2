@@ -54,7 +54,7 @@ class Carrello
     
     /** Conteggio dei prodotti inseriti nel carrello */
     public function getNumProdotti() {
-        return $_numProdotti;
+        return $this->_numProdotti;
     }
     public function eVuoto() {
         return (!empty($this->_prodotti));
